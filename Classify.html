@@ -559,7 +559,7 @@
         ctrl_v().then(
             src => {
                 for(let l of src.split(/\r\n|\n|\r/)){
-                    document.body.append(fnode(l))
+                    document.body.append(fnode(l));
                 }
               menu.style.visibility = 'visible';
               compute_padding(menu);
@@ -783,11 +783,11 @@
 </script>
 <script src="clipboard.js"></script>
 <body>
-    <button onclick=
-    "init(
+    <button onclick = "
+      init(
            this,
            document.getElementById('menu')
-     );"
+      );"
     class = "button">Read Text from Clipboard for Initialization</button>
     <div id="menu" class = "bar" style="visibility:hidden;">
         <input class = "input"
