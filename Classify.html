@@ -205,6 +205,16 @@
       compute_padding(menu);
     }
 
+    function auto_visibiliy_input(input,menu){
+      if(background_colors.length === 0){
+           input.style.display = "none"; // 无法再添加更多的正则表达式
+      }else{
+           input.style.display = "inline-block"; // 还可以添加更多的正则表达式
+      }
+      
+      compute_padding(menu);
+    }
+
     function clear_walker(lines){
 
         for(let line of lines){
@@ -343,11 +353,7 @@
             
             append_regex_history(menu,input,lines,history,regexContent,background_color); //添加使用过的正则表达式
 
-            if(background_colors.length === 0){
-                input.style.display = "none"; // 无法再添加更多的正则表达式
-            }else{
-                input.style.display = "inline-block"; // 还可以添加更多的正则表达式
-            }
+            auto_visibiliy_input(input,menu);
 
         }
     }
@@ -374,11 +380,7 @@
 
         background_colors.unshift(background_color); //回退颜色使用
 
-        if(background_colors.length === 0){
-            input.style.display = "none"; // 无法再添加更多的正则表达式
-        }else{
-            input.style.display = "inline-block"; // 还可以添加更多的正则表达式
-        }
+        auto_visibiliy_input(input,menu);
 
     }
 
