@@ -149,12 +149,9 @@
 
     }
     function compute_padding(menu){
-      alert("adjust");
-      
-      document.body.style.paddingTop = menu.style.clientHeight + "px";
+      document.body.style.paddingTop = menu.clientHeight + "px";
     }
     function init(init_button,menu){
-        init_button.remove(); //直接移除初始化按钮
         let fnode = (content) =>{
             let line = document.createElement("div");
             line.textContent = content;
@@ -166,6 +163,7 @@
                 for(let l of src.split(/\r\n|\n|\r/)){
                     document.body.append(fnode(l))
                 }
+              init_button.remove(); //移除初始化按钮
               menu.style.visibility = 'visible';
               compute_padding(menu);
             }
