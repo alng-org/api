@@ -151,7 +151,7 @@
     function compute_padding(menu){
       alert("adjust");
       
-      document.body.style.paddingTop = menu.clientHeight;
+      document.body.style.paddingTop = menu.style.clientHeight + "px";
     }
     function init(init_button,menu){
         init_button.remove(); //直接移除初始化按钮
