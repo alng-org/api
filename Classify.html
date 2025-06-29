@@ -814,24 +814,3 @@
     <div id="regex_history"  class="history"></div>
     </div>
 </body>
-
-                    if(event.key === 'Enter'){
-                        event.preventDefault();
-                        classify(
-                            this,
-                            document.getElementById('menu'),
-                            document.getElementsByClassName('line'),
-                            document.getElementById('regex_history')
-                        );
-                    }else{
-                        //pass
-                    }"
-            oninput="clear_walker(
-                        document.getElementsByClassName('line')
-                    )"
-        />
-        <button class="button" id = "previous" style="color:gray;">&uarr;</button>
-        <button class="button" id = "next"     style="color:gray;">&darr;</button>
-    <div id="regex_history"  class="history"></div>
-    </div>
-</body>
