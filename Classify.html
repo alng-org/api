@@ -1,6 +1,6 @@
 <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0
                                minimum-scale=1.0 maximum-scale=1.0 user-scalable=no">
-<title>Classify</title>
+<title>Classify-test</title>
 <style>
     .bar,.button,.line,.regex,.input,.history,.matched,.miss{
         font-weight: bold;
@@ -380,7 +380,8 @@
     this.remove();
     document.getElementById('menu').style.visibility = 'visible';"
     class = "button">Read Text from Clipboard for Initialization</button>
-    <div id="menu" class = "bar" style="visibility:hidden;">
+    <div id="menu" class = "bar" style="visibility:hidden;"
+      onresize="alert("here");">
         <input class = "input"
             style="display: inline-block;"
             placeholder = "Please Input Regex Expression"
