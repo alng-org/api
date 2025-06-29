@@ -1,3 +1,4 @@
+<!doctype html>
 <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0
                                minimum-scale=1.0 maximum-scale=1.0 user-scalable=no">
 <title>Classify</title>
@@ -55,6 +56,7 @@
         position:fixed;
         top:1%;
         left:1%;
+        height: fit-content;
         width:calc(98% - 1.1rem);
     }
 
@@ -147,7 +149,9 @@
 
     }
     function compute_padding(menu){
-      document.body.style.paddingTop = menu.style.clientHeight;
+      alert("adjust");
+      
+      document.body.style.paddingTop = menu.clientHeight;
     }
     function init(init_button,menu){
         init_button.remove(); //直接移除初始化按钮
