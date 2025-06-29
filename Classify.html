@@ -63,9 +63,11 @@
     .input{
         width: 70%;
     }
+    
     .line{
         width: fit-content;
     }
+    
     .history{
       display:flex;
       flex-flow: row wrap;
@@ -73,6 +75,8 @@
 
     .regex{
         user-select: all;
+        overflow-wrap:break-word;
+        word-break:break-all;
     }
 
     
@@ -149,7 +153,7 @@
 
     }
     function compute_padding(menu){
-      document.body.style.paddingTop = menu.clientHeight + "px";
+      document.body.style.paddingTop = `calc(2% + ${menu.clientHeight}px)`;
     }
     function init(init_button,menu){
         let fnode = (content) =>{
